@@ -1,3 +1,6 @@
+mod control;
+mod fibonacci;
+
 fn main() {
     let mut x = 5;
     println!("X is equal to {x}");
@@ -28,4 +31,17 @@ fn main() {
 
     let array1 = [1, 2, 3, 4, 5];
     println!("{}", array1[remainder]);
+
+    control::if_condition(-90);
+    control::loops(4);
+
+    control::label_loops();
+    control::while_loop();
+    control::for_loop_array(&[90, 80, 70, 60]);
+
+    control::for_loop_range();
+    
+    for number in 0..10 {
+        println!("The {}th Fibonacci number is: {}", number, fibonacci::fibonacci_practice(number));
+    }
 }
